@@ -11,7 +11,8 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   # GET /blogs/1.json
-  def show; end
+  def show;
+  end
 
   # GET /blogs/new
   def new
@@ -19,7 +20,8 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1/edit
-  def edit; end
+  def edit;
+  end
 
   # POST /blogs
   # POST /blogs.json
@@ -56,7 +58,7 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
+      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.'}
       format.json { head :no_content }
     end
   end
@@ -73,3 +75,4 @@ class BlogsController < ApplicationController
     params.require(:blog).permit(:title, :body)
   end
 end
+
