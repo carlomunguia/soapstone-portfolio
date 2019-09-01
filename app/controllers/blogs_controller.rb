@@ -58,9 +58,21 @@ class BlogsController < ApplicationController
   def destroy
     @blog.destroy
     respond_to do |format|
-      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.'}
+      format.html { redirect_to blogs_url, notice: 'Blog was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def toggle_status
+    @blog.published! if @blog.draft?
+    @blog.draft! if @blog.published?
+
+    if @blog.draft?
+      @blog.published!
+    elsif @blog.published?
+      @blog.draft!
+    end
+    redirect_to blogs_url, notice: 'Potion was updated!!'
   end
 
   private
