@@ -1,5 +1,5 @@
 # frozen_string_literal: true
-
+# The main Blog controller, yo
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy]
 
@@ -11,6 +11,7 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1
   # GET /blogs/1.json
+  # Shows the blog on the page
   def show;
   end
 
