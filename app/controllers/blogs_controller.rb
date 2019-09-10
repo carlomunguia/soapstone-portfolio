@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # The main Blog controller, yo
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy]
@@ -76,6 +77,8 @@ class BlogsController < ApplicationController
     redirect_to blogs_url, notice: 'Potion was updated!!'
   end
 
+
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
@@ -85,7 +88,7 @@ class BlogsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def blog_params
-    params.require(:blog).permit(:title,:subtitle,:body)
+    params.require(:blog).permit(:title, :subtitle, :body)
   end
 end
 

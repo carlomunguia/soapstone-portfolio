@@ -54,5 +54,10 @@ class PortfoliosController < ApplicationController
     end
   end
 
+  # This is a dummy-class that is reusable through the code
+  def persist
+    @_params
+  end
+
 
 end
