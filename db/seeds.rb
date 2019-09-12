@@ -44,10 +44,19 @@ end
 
 1.times do |portfolio_item|
   Portfolio.create!(
-      title: "Portfolio title: #{portfolio_item}",
-      subtitle: 'Angular',
-      body: 'Soapstone historically is known as a sacred property.',
-      main_image: 'http://placehold.it/600x400',
-      thumb_image: 'http://placehold.it/350x200'
+    title: "Portfolio title: #{portfolio_item}",
+    subtitle: 'Angular',
+    body: 'Soapstone historically is known as a sacred property.',
+    main_image: 'http://placehold.it/600x400',
+    thumb_image: 'http://placehold.it/350x200'
   )
 end
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}",
+    portfolio_id: Portfolio.last.id
+  )
+end
+
+puts "3 technologies created!"

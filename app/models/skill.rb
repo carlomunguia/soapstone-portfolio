@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# This is the Skill record
 class Skill < ApplicationRecord
   include Placeholder
   validates_presence_of :title, :percent_utilized
