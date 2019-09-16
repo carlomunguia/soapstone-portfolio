@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-# This is the Placeholder reuse
+# This is the Placeholder reusable
 module Placeholder
   extend ActiveSupport::Concern
 

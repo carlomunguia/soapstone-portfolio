@@ -22,3 +22,4 @@ class Portfolio < ApplicationRecord
   end
 end
 
+
