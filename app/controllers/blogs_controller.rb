@@ -3,7 +3,6 @@
 # The main Blog controller, yo
 class BlogsController < ApplicationController
   before_action :set_blog, only: %i[show edit update destroy]
-
   # GET /blogs
   # GET /blogs.json
   def index
