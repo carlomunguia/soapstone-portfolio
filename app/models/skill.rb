@@ -11,4 +11,3 @@ class Skill < ApplicationRecord
     self.badge ||= Placeholder.image_generator(height: '250', width: '250')
   end
 end
-
