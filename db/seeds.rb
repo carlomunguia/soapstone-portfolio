@@ -13,7 +13,7 @@ puts '3 topics created!'
     title: "My Blog  #{blog}",
     body: "If you hypnotize it, it will go away.
     Any little thing can be your friend if you let it be.
-    But they're very easily killed. Clouds are delicate.
+    But they're very easily spilled. Clouds are delicate.
     See. We take the corner of the brush and let it play back-and-forth.
     We'll throw some old gray clouds in here just sneaking around and having fun.
     In nature, dead trees are just as normal as live trees.",
