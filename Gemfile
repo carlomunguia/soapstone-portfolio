@@ -3,11 +3,11 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.0'
+ruby '3.1.2'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'aws-sdk-sqs'
-gem 'rails', '~> 6.0.0'
+gem 'rails', '~> 6.1.6.1'
 # Use postgresql as the database for Active Record
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
@@ -51,3 +51,9 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'friendly_id', '~> 5.2.4'
 gem 'shoryuken'
+gem 'net-smtp'
+gem 'psych', '< 4'
+group :development do
+  gem "ruby-lsp", require: false
+end
+

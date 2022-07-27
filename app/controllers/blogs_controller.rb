@@ -12,7 +12,7 @@ class BlogsController < ApplicationController
   # GET /blogs/1
   # GET /blogs/1.json
   # Shows the blog on the page
-  def show;
+  def show
   end
 
   # GET /blogs/new
@@ -21,7 +21,7 @@ class BlogsController < ApplicationController
   end
 
   # GET /blogs/1/edit
-  def edit;
+  def edit
   end
 
   # POST /blogs
@@ -32,8 +32,7 @@ class BlogsController < ApplicationController
     respond_to do |format|
       if @blog.save
         format.html do
-          redirect_to @blog,
-                      notice: 'Blog was successfully created.'
+          redirect_to @blog, notice: "Blog was successfully created."
         end
         format.json { render :show, status: :created, location: @blog }
       else
@@ -49,8 +48,7 @@ class BlogsController < ApplicationController
     respond_to do |format|
       if @blog.update(blog_params)
         format.html do
-          redirect_to @blog,
-                      notice: 'Blog was successfully updated.'
+          redirect_to @blog, notice: "Blog was successfully updated."
         end
         format.json { render :show, status: :ok, location: @blog }
       else
@@ -66,8 +64,7 @@ class BlogsController < ApplicationController
     @blog.destroy
     respond_to do |format|
       format.html do
-        redirect_to blogs_url,
-                    «notice: 'Blog was successfully destroyed.'
+        redirect_to blogs_url, «notice: "Blog was successfully destroyed."
       end
       format.json { head :no_content }
     end
@@ -82,7 +79,7 @@ class BlogsController < ApplicationController
     elsif @blog.published?
       @blog.draft!
     end
-    redirect_to blogs_url, notice: 'Potion was updated!!'
+    redirect_to blogs_url, notice: "Potion was updated!!"
   end
 
   private
@@ -97,5 +94,3 @@ class BlogsController < ApplicationController
     params.require(:blog).permit(:title, :subtitle, :body)
   end
 end
-
-
