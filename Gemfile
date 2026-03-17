@@ -19,7 +19,7 @@ gem 'image_processing', '~> 1.2'
 gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'aws-sdk-sqs'
-gem 'devise', '~> 4.9'
+gem 'devise', '~> 5.0'
 gem 'friendly_id', '~> 5.4'
 gem 'shoryuken'
 gem 'net-smtp'
